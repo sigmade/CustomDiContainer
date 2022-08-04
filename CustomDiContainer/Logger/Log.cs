@@ -1,6 +1,6 @@
-﻿namespace CustomDiContainer
+﻿namespace CustomDiContainer.Logger
 {
-    public class Logger
+    public class Log : ILogger
     {
         public void SaveLog()
         {

@@ -1,10 +1,12 @@
-﻿namespace CustomDiContainer
+﻿using CustomDiContainer.Logger;
+
+namespace CustomDiContainer.Services
 {
     public class StubService : IService
     {
-        private Logger _logger;
+        private ILogger _logger;
 
-        public StubService(Logger logger)
+        public StubService(ILogger logger)
         {
             _logger = logger;
         }

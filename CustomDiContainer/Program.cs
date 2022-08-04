@@ -1,21 +1,18 @@
-﻿namespace CustomDiContainer
+﻿using CustomDiContainer.Logger;
+using CustomDiContainer.Services;
+using OurDiContainer;
+
+namespace CustomDiContainer
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            //var container = new Container();
-
-            //container.RegisterInstance<Logger>(new Logger());
-            //container.Register<IService, StubService>();
-
-            //container.GetInstance(typeof(MainController));
-
             var services = new SimpleContainer();
-            services.AddNew(typeof(IService), typeof(StubService));
-            services.AddNew(typeof(Logger), typeof(Logger));
-            services.GetInstance(typeof(MainController));
 
+            services.AddNewService(typeof(ILogger), typeof(Log));
+            services.AddNewService(typeof(IService), typeof(SomeService));
+            services.GetInstance(typeof(MainController));
 
             Console.ReadKey();
         }

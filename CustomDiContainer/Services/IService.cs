@@ -1,4 +1,4 @@
-﻿namespace CustomDiContainer
+﻿namespace CustomDiContainer.Services
 {
     public interface IService
     {

@@ -1,4 +1,6 @@
-﻿namespace CustomDiContainer
+﻿using CustomDiContainer.Services;
+
+namespace CustomDiContainer
 {
     public class MainController
     {
