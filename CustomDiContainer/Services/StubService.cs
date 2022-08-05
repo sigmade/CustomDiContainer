@@ -13,7 +13,7 @@ namespace CustomDiContainer.Services
 
         public void GetProducts()
         {
-            Console.WriteLine("StubProducts");
+            Console.WriteLine("StubServiceProducts");
             _logger.SaveLog();
         }
     }

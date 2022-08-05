@@ -15,7 +15,6 @@
         }
 
         // Получение экземпляра из словаря или за счет создания нового
-        // так же используется для регистрации корневого класса
         public object GetInstance(Type type)
         {
             // Смотрим есть ли уже экземпляр в словаре если нет то создаем его
@@ -30,14 +29,14 @@
             throw new InvalidOperationException("No registration for " + type);
         }
 
-        // Метода создает тип объекта, возвращает экземпляр со всеми зависимостями
+        // Метод принимает тип, возвращает экземпляр со всеми зависимостями
         private object CreateInstance(Type type)
         {
             // Получаем конструктор
             var ctor = type.GetConstructors().Single();
             // Получаем информацию параметров конструктора
             var ctorParamsInfo = ctor.GetParameters();
-            // Из инфо получаем типа параметров
+            // Из инфо получаем типы параметров
             var ctorParamTypes = ctorParamsInfo.Select(p => p.ParameterType);
             // Создаем коллекцию экземпляров параметров к-ра
             var ctorParamInstances = new List<object>();

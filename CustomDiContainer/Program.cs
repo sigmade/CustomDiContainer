@@ -10,9 +10,12 @@ namespace CustomDiContainer
         {
             var services = new SimpleContainer();
 
-            services.AddNewService(typeof(ILogger), typeof(Log));
-            services.AddNewService(typeof(IService), typeof(SomeService));
-            services.GetInstance(typeof(MainController));
+            services.AddNewService(typeof(ILogger), typeof(DbLogger));
+            services.AddNewService(typeof(IService), typeof(StubService));
+
+            // Регистрируем корневой объект, его метод Start будет использоваться
+            // как исходная точка работы приложения
+            services.AddNewService(typeof(MainController), typeof(MainController));
 
             Console.ReadKey();
         }

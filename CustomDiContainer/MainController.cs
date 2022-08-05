@@ -2,6 +2,7 @@
 
 namespace CustomDiContainer
 {
+
     public class MainController
     {
         private readonly IService _service;
@@ -11,9 +12,13 @@ namespace CustomDiContainer
             Start();
         }
 
+        // Иходная точка работы приложения аналог метода Main в Program
         public void Start()
         {
-            Console.WriteLine("Controller Started");
+            Console.WriteLine("App Started");
+
+            // APP Logic.....................
+
             _service.GetProducts();
         }
     }

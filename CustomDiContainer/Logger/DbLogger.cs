@@ -1,10 +1,10 @@
 ﻿namespace CustomDiContainer.Logger
 {
-    public class Log : ILogger
+    public class DbLogger : ILogger
     {
         public void SaveLog()
         {
-            Console.WriteLine("Logs saved");
+            Console.WriteLine("Logs saved in DB");
         }
     }
 }
