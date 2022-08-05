@@ -8,7 +8,7 @@ namespace CustomDiContainer
     {
         static void Main(string[] args)
         {
-            var services = new SimpleContainer();
+            var services = new Container();
 
             services.AddNewService(typeof(ILogger), typeof(DbLogger));
             services.AddNewService(typeof(IService), typeof(StubService));

@@ -1,6 +1,6 @@
 ﻿namespace OurDiContainer
 {
-    public class SimpleContainer
+    public class Container
     {
         // Словарь интерфейсов+экземпляров сервисов для построения графа зависимостей
         private readonly Dictionary<Type, object> _services = new Dictionary<Type, object>();
